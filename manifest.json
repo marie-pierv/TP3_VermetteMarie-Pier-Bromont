@@ -2,7 +2,7 @@
     "name": "TP3_VermetteMarie-Pier-Bromont",
     "short_name": "PWA",
     "icons": [{
-        "src": "img/maskable_icon_x48.png",
+        "src": "/TP3_VermetteMarie-Pier-Bromont/img/maskable_icon_x48.png",
         "sizes": "48x48",
         "type": "image/png",
         "purpose": "any maskable"
