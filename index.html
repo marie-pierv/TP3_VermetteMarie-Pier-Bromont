@@ -2,10 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#293821" />
+    <link rel="manifest" href="manifest.json">
+    <script src="js/script.js" defer></script>
+	<script src="js/install.js" defer></script>
+	<script src="service-worker.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="style/css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <title>Document</title>
+    <script>// Register service worker.
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', () => {
+			navigator.serviceWorker.register('service-worker.js')
+			.then((reg) => {
+			console.log('Service worker registered.', reg);
+			});
+			});
+			}
+	</script>
 </head>
 <body>
 <section>
