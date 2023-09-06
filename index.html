@@ -35,8 +35,8 @@
 <body>
     <header class="container grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 items-center">
             <nav class="relative py-4 flex justify-between items-center bg-white">
-                <a href="#">
-                    <img class="w-40" src="img/logo.png" alt="" >
+                <a href="index.html">
+                    <h1><img class="w-40" src="img/logo.png" alt="Logo Bromont Plein-air" ></h1>
                 </a>
                 <div class="lg:hidden">
                     <button class="navbar-burger flex items-center text-gray-600 p-3">
@@ -47,19 +47,19 @@
                     </button>
                 </div>
                 <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-                    <li><a class="text-sm text-gray-600 hover:text-gray-400" href="#">Accueil</a></li>
+                    <li><a class="text-sm text-sky-700 font-bold" href="index.html">Accueil</a></li>
                     <li class="text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                         </svg>
                     </li>
-                    <li><a class="text-sm text-sky-700 font-bold" href="#">À faire</a></li>
+                    <li><a class="text-sm text-gray-60 hover:text-gray-400" href="aFaire.html">À faire</a></li>
                     <li class="text-gray-600">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="w-4 h-4 current-fill" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
                         </svg>
                     </li>
-                    <li><a class="text-sm text-gray-600 hover:text-gray-400" href="#">Événement</a></li>
+                    <li><a class="text-sm text-gray-600 hover:text-gray-400" href="evenements.html">Événement</a></li>
                 </ul>
                 <button id="butInstall" aria-label="Install" class="hidden lg:inline-block py-3 px-4 bg-sky-700 hover:bg-sky-800 text-sm text-white font-medium rounded-xl transition duration-200">Télécharger</button>
             </nav>
@@ -79,13 +79,13 @@
                     <div>
                         <ul>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="#">Accueil</a>
+                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="index.html">Accueil</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="#">À faire</a>
+                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="aFaire.html">À faire</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="#">Événements</a>
+                                <a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-sky-50 hover:text-sky-700 rounded" href="evenements.html">Événements</a>
                         </ul>
                     </div>
                     <div class="mt-auto">
@@ -204,14 +204,18 @@
 
     <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
         <div class="container-fluid grid grid-cols-12 ">
-            <div class="col-span-12 md:col-span-6 bg-red-500 md:col-start-4 p-2"></div>
+            <div class="col-span-12 md:col-span-6 bg-red-500 md:col-start-4">
+                <h2 class="text-2xl font-bold text-gray-800 xl:text-2xl text-center">Voir la carte touristique de la région.</h2>
+            </div>
             <div class="col-span-12 sm:col-span-12 bg-blue-500 p-2"></div>
         </div>
     </section>
     
     <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
         <div class="container-fluid grid grid-cols-12 ">
-            <div class="col-span-12 sm:col-span-12 bg-blue-500 p-2"></div>
+            <div class="col-span-12 sm:col-span-12 bg-blue-500">
+                <h2 class="max-w-lg text-2xl font-bold text-gray-800 xl:text-2xl">Gallerie</h2>
+            </div>
             <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
             <div class="col-span-12 sm:col-span-4 bg-green-500 p-2 row-span-2"></div>
             <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
@@ -226,11 +230,11 @@
     <footer class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
         <div class="container-fluid grid grid-cols-12 ">
             <div class="col-span-12 lg:col-span-6 row-span-2">
-                    <h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl dark:text-white">333Subscribe our newsletter to get update.</h3>
+                    <h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl">Abonnez-vous à notre infolettre.</h3>
                         <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
-                            <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md text-sm dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address">
+                            <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md text-sm dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Adresse courriel">
                         <button class="w-full px-4 py-3 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-sky-700 rounded-lg hover:bg-sky-800 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                            Subscribe
+                            S'abonner
                         </button>       
                 </div>
             </div>
@@ -238,18 +242,18 @@
                 <p class="font-bold text-sm text-gray-800 dark:text-white">Liens rapides</p>
         
                         <div class="flex flex-col items-start mt-5 space-y-2">
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Accueil</a>
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">À faire</a>
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300  hover:underline hover:text-sky-700">Événements</a>
+                            <a href="index.html" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Accueil</a>
+                            <a href="aFaire.html" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">À faire</a>
+                            <a href="evenements.html" class="text-sm text-gray-600 transition-colors duration-300  hover:underline hover:text-sky-700">Événements</a>
                         </div>
             </div>
             <div class="col-span-12 pt-8 md:col-span-6 lg:col-span-3 lg:pt-0">
                 <p class="font-bold text-sm text-gray-800 dark:text-white">Industries</p>
         
                         <div class="flex flex-col items-start mt-5 space-y-2">
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Retail & E-Commerce</a>
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Information Technology</a>
-                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Finance & Insurance</a>
+                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Restaurants</a>
+                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Hôtels</a>
+                            <a href="#" class="text-sm text-gray-600 transition-colors duration-300 hover:underline hover:text-sky-700">Magasins</a>
                         </div>
             </div>
             <div class="col-span-12 sm:col-span-12 row-span-2">
@@ -257,8 +261,8 @@
             </div>
             <div class="col-span-12 sm:col-span-12 row-span-2">
                 <div class="col-span-12 flex items-center justify-between">
-                    <a href="#">
-                        <img class="w-40" src="img/logo.png" alt="">
+                    <a href="index.html">
+                        <img class="w-40" src="img/logo.png" alt="Logo Bromont Plein-air">
                     </a>
                     
                     <div class="flex -mx-2">
