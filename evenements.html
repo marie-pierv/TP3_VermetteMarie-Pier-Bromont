@@ -10,7 +10,7 @@
 	<script src="service-worker.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
-    <title>Bromont plein-air</title>
+    <title>Événements</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
     <meta name="apple-mobile-web-app-title" content="Progressive-web-app-test">
@@ -140,88 +140,53 @@
         </script>
     </header>
 
-    <section> <!--Carrousel-->
-    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
-
-    <article x-data="slider" class="relative w-full flex overflow-hidden shadow-2xl">
-        <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
-            <span x-text="currentIndex"></span>/
-            <span x-text="images.length"></span>
-        </div>
-        <template x-for="(image, index) in images">
-            <figure class="h-96" x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300"
-            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
-            x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0">
-            <img :src="image" alt="Image" class="absolute inset-0 z-10 h-full w-full object-cover" />
-            </figure>
-        </template>
-
-        <button @click="back()"
-            class="absolute left-14 top-1/2 w-8 h-8 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
-            <svg class=" w-6 h-6 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
-                </path>
-            </svg>
-        </button>
-
-        <button @click="next()"
-            class="absolute right-14 top-1/2 w-8 h-8 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
-            <svg class=" w-6 h-6 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-            </svg>
-        </button>
-    </article>
-
-        <script>
-            document.addEventListener('alpine:init', () => {
-                Alpine.data('slider', () => ({
-                    currentIndex: 1,
-                    images: [
-                        'https://marie-pierv.github.io/TP3_VermetteMarie-Pier-Bromont/img/image-carrousel-velo.jpg',
-                        'https://source.unsplash.com/1600x900/?lego',
-                        'https://source.unsplash.com/1600x900/?textures&patterns'
-                    ],
-                    back() {
-                        if (this.currentIndex > 1) {
-                            this.currentIndex = this.currentIndex - 1;
-                        }
-                    },
-                    next() {
-                        if (this.currentIndex < this.images.length) {
-                            this.currentIndex = this.currentIndex + 1;
-                        } else if (this.currentIndex <= this.images.length){
-                            this.currentIndex = this.images.length - this.currentIndex + 1
-                        }
-                    },
-                }))
-            })
-        </script> 
-        <script src="https://cdn.tailwindcss.com"></script>
-    </section>  
-
-    <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
-        <div class="container-fluid grid grid-cols-12 ">
-            <div class="col-span-12 md:col-span-6 bg-red-500 md:col-start-4 p-2"></div>
-            <div class="col-span-12 sm:col-span-12 bg-blue-500 p-2"></div>
+    <section class="container grid mx-auto max-w-7xl pt-10 px-4 sm:px-6 lg:px-8 items-center">
+        <h1 class="max-w-lg text-2xl text-sky-600 pb-10 underline underline-offset-8">Événements</h1>
+    </section>
+    <section>
+        <div class="relative w-full">
+            <img src="img/image-carrousel-velo.jpg" alt="">
+            <div class="flex justify-center">
+                <div class="absolute bg-white/50 p-5 top-1/4">
+                    <h2 class="text-2xl font-bold text-gray-800 xl:text-2xl text-center">Bannière du prochain événement</h2>
+                    <p class="text-center" >Plusieurs très beaux circuits routiers s'offrent à vous, nous vous présentons les 3 plus populaires.</p>
+                </div>
+            </div>
         </div>
     </section>
     
     <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
-        <div class="container-fluid grid grid-cols-12 ">
-            <div class="col-span-12 sm:col-span-12 bg-blue-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-green-500 p-2 row-span-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-blue-500 p-2 row-span-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-green-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
+        <div class="container-fluid grid grid-cols-12 gap-4">
+            <div class="col-span-12 md:col-span-12 bg-red-500">
+                <h2 class="max-w-lg text-2xl font-bold text-gray-800 xl:text-2xl">Liste des événements de l'été</h2>
+                <p>Plusieurs très beaux circuits routiers s'offrent à vous, nous vous présentons les 3 plus populaires.</p>
+            </div>
+            <div class="col-span-12 sm:col-span-4 bg-blue-500 order-1 sm:order-none"><h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl text-center">25 mai 2024</h3></div>
+            <div class="col-span-12 sm:col-span-4 bg-yellow-500 order-4 sm:order-none"><h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl text-center">Circuit 2 - Le lac</h3></div>
+            <div class="col-span-12 sm:col-span-4 bg-green-500 order-7 sm:order-none"><h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl text-center">Circuit 3 - La montagne</h3></div>
+            <div class="col-span-12 sm:col-span-4 bg-blue-500 order-2 sm:order-none"><p class="text-sm text-gray-600 text-center">Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tæortor.</p></div>
+            <div class="col-span-12 sm:col-span-4 bg-yellow-500 order-5 sm:order-none"><p class="text-sm text-gray-600 text-center">Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tortor.</p></div>
+            <div class="col-span-12 sm:col-span-4 bg-green-500 order-8 sm:order-none"><p class="text-sm text-gray-600 text-center">Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tortor.</p></div>
+            <div class="col-span-12 sm:col-span-4 bg-blue-500 order-3 sm:order-none"><img src="img/image-carrousel-velo.jpg" alt=""></div>
+            <div class="col-span-12 sm:col-span-4 bg-yellow-500 order-6 sm:order-none"><img src="img/image-carrousel-velo.jpg" alt=""></div>
+            <div class="col-span-12 sm:col-span-4 bg-green-500 order-9 sm:order-none"><img src="img/image-carrousel-velo.jpg" alt=""></div>
         </div>
     </section>
 
+    <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
+        <div class="container-fluid grid grid-cols-12 gap-4">
+            <div class="col-span-12 md:col-span-12 bg-red-500">
+                <h2 class="max-w-lg text-2xl font-bold text-gray-800 xl:text-2xl">Participer à l'événement</h2>
+                <p>Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tortor.</p>
+            </div>
+            <div class="col-span-12 sm:col-span-6 bg-blue-500 order-1 sm:order-none"><h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl text-center">Randonnée 1 - L'indécise</h3></div>
+            <div class="col-span-12 sm:col-span-6 bg-green-500 order-4 sm:order-none"><h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl text-center">Randonnée 2 - L'essoufflée</h3></div>
+            <div class="col-span-12 sm:col-span-6 bg-blue-500 order-2 sm:order-none"><p class="text-sm text-gray-600 text-center">Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tæortor.</p></div>
+            <div class="col-span-12 sm:col-span-6 bg-green-500 order-5 sm:order-none"><p class="text-sm text-gray-600 text-center">Maecenas et felis urna. Donec posuere lacinia magna a viverra. Ut molestie nisl vitae mi sollicitudin viverra sed ut purus. Vivamus non leo eros. Morbi luctus nisl nec est hendrerit, sit amet accumsan sem hendrerit. Ut varius sapien vel commodo gravida. Nunc vitae tristique tortor.</p></div>
+            <div class="col-span-12 sm:col-span-6 bg-blue-500 order-3 sm:order-none"><img src="img/image-carrousel-velo.jpg" alt=""></div>
+            <div class="col-span-12 sm:col-span-6 bg-green-500 order-6 sm:order-none"><img src="img/image-carrousel-velo.jpg" alt=""></div>
+        </div>
+    </section>
 
     <footer class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
         <div class="container-fluid grid grid-cols-12 ">
