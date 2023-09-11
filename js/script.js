@@ -1,53 +1,47 @@
 const validateForm = () => {
 
     const form = document.getElementById('form'); // on manipule la valeur de l'input et non l'input ou le contenant
-    const username = document.getElementById('username'); 
+    const nom = document.getElementById('nom'); 
+    const prenom = document.getElementById('prenom'); 
     const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const password2 = document.getElementById('password2');
+    const evenement = document.getElementById('evenement');
 
-    const usernameValue = username.value.trim();  // enlève les espaces vides
+    const nomValue = nom.value.trim();  // enlève les espaces vides
+    const prenomValue = prenom.value.trim();
     const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const evenementValue = evenement.value.trim();
 
     let noError = true;   // variable bouléaine réutilisable
 
-    if(usernameValue === '') {
-        setError(username, "Un nom d'usager est requit");
+    if(nomValue === '') {
+        setError(nom, "Le nom est requit");
         noError = false;
     } else {
-        setSuccess(username);
+        setSuccess(nom);
+    }
+
+    if(prenomValue === '') {
+        setError(prenom, "Le prénom est requit");
+        noError = false;
+    } else {
+        setSuccess(prenom);
     }
 
     if(emailValue === '') {
-        setError(email, "Un email est requit");
+        setError(email, "Un courriel est requit");
         noError = false;
     } else if (!isValidEmail(emailValue)) {
-        setError(email, "Un email valide est requit");
+        setError(email, "Un courriel valide est requit");
         noError = false;
     } else {
         setSuccess(email);
     }
 
-    if(passwordValue === '') {
-        setError(password, "Un mot de passe est requit");
-        noError = false;
-    } else if(passwordValue.length < 8){
-        setError(password, 'votre mot de passe doit contenir plus de 8 caractères');
+    if(evenementValue === '') {
+        setError(evenement, "L'événement est requis");
         noError = false;
     } else {
-        setSuccess(password);
-    }
-
-    if(password2Value === '') {
-        setError(password2, "Un mot depasse est requit");
-        noError = false;
-    } else if(password2Value.length < 8){
-        setError(password2, 'votre mot de passe doit contenir plus de 8 caractères');
-        noError = false;
-    } else {
-        setSuccess(password2);
+        setSuccess(evenement);
     }
     return noError;
 };
