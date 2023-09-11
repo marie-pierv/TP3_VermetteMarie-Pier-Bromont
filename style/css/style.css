@@ -6,3 +6,41 @@ h1, p, h2, h3, h4 {
 * {
   font-family: "Roboto", serif;
 }
+
+#form {
+  margin: 2vh auto 0 auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  display: block;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .errorMessage {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}

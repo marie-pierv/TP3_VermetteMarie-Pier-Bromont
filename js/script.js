@@ -1,30 +1,23 @@
 const validateForm = () => {
 
     const form = document.getElementById('form'); // on manipule la valeur de l'input et non l'input ou le contenant
-    const nom = document.getElementById('form__nom'); 
-    const prenom = document.getElementById('form__prenom'); 
-    const email = document.getElementById('form__email');
-    const message = document.getElementById('form__message');
+    const username = document.getElementById('username'); 
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const password2 = document.getElementById('password2');
 
-    const nomValue = nom.value.trim();  // enlève les espaces vides
-    const prenomValue = prenom.value.trim();
+    const usernameValue = username.value.trim();  // enlève les espaces vides
     const emailValue = email.value.trim();
-    const messageValue = message.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
 
     let noError = true;   // variable bouléaine réutilisable
 
-    if(nomValue === '') {
-        setError(nom, "Un nom est requit");
+    if(usernameValue === '') {
+        setError(username, "Un nom d'usager est requit");
         noError = false;
     } else {
-        setSuccess(nom);
-    }
-
-    if(prenomValue === '') {
-        setError(prenom, "Un prénom est requit");
-        noError = false;
-    } else {
-        setSuccess(prenom);
+        setSuccess(username);
     }
 
     if(emailValue === '') {
@@ -35,6 +28,26 @@ const validateForm = () => {
         noError = false;
     } else {
         setSuccess(email);
+    }
+
+    if(passwordValue === '') {
+        setError(password, "Un mot de passe est requit");
+        noError = false;
+    } else if(passwordValue.length < 8){
+        setError(password, 'votre mot de passe doit contenir plus de 8 caractères');
+        noError = false;
+    } else {
+        setSuccess(password);
+    }
+
+    if(password2Value === '') {
+        setError(password2, "Un mot depasse est requit");
+        noError = false;
+    } else if(password2Value.length < 8){
+        setError(password2, 'votre mot de passe doit contenir plus de 8 caractères');
+        noError = false;
+    } else {
+        setSuccess(password2);
     }
     return noError;
 };
