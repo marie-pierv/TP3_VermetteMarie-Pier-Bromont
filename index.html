@@ -180,9 +180,9 @@
                 Alpine.data('slider', () => ({
                     currentIndex: 1,
                     images: [
-                        'https://marie-pierv.github.io/TP3_VermetteMarie-Pier-Bromont/img/image-carrousel-velo.jpg',
-                        'https://source.unsplash.com/1600x900/?lego',
-                        'https://source.unsplash.com/1600x900/?textures&patterns'
+                        'img/carrousel-rando.jpeg',
+                        'img/carrousel-velo-route.jpeg',
+                        'img/image-carrousel-velo.jpg'
                     ],
                     back() {
                         if (this.currentIndex > 1) {
@@ -202,7 +202,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </section>  
 
-    <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
+    <section class="container grid mx-auto max-w-7xl py-10 px-4 sm:px-6 lg:px-8 items-center">
         <a href="img/WEB-BROMONT-SENTIERS-2018_WEB.pdf">
         <div class="flex relative col-span-12 justify-center items-center">
             <img src="img/Carte.png" alt="carte de la région">
@@ -213,24 +213,25 @@
         </a>
     </section>
     
-    <section class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
-        <div class="container-fluid grid grid-cols-12 ">
-            <div class="col-span-12 sm:col-span-12 bg-blue-500">
-                <h2 class="max-w-lg text-2xl font-bold text-gray-800 xl:text-2xl">Gallerie</h2>
+    <section class="bg-slate-100 py-10">
+        <div class="container-fluid grid mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 items-center">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 sm:col-span-12 bg-blue-500">
+                    <h2 class="max-w-lg text-2xl font-bold text-gray-800 xl:text-2xl">Gallerie</h2>
+                </div>
+                <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-green-500 p-2 row-span-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-blue-500 p-2 row-span-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-green-500 p-2"></div>
+                <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
             </div>
-            <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-green-500 p-2 row-span-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-yellow-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-blue-500 p-2 row-span-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-green-500 p-2"></div>
-            <div class="col-span-12 sm:col-span-4 bg-red-500 p-2"></div>
         </div>
     </section>
 
 
-    <footer class="container grid mx-auto max-w-7xl pt-24 px-4 sm:px-6 lg:px-8 items-center">
-        <hr class="pt-8">
+    <footer class="container grid mx-auto max-w-7xl pt-10 px-4 sm:px-6 lg:px-8 items-center">
         <div class="container-fluid grid grid-cols-12 ">
             <div class="col-span-12 lg:col-span-6 row-span-2">
                     <h3 class="max-w-lg text-xl font-light text-gray-800 xl:text-2xl">Abonnez-vous à notre infolettre.</h3>
